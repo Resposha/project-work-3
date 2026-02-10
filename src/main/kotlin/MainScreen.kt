@@ -1,5 +1,5 @@
 class MainScreen : NavigationAndInput() {
-    val action = ActionsWithArchives()
+    private val action = ActionsWithArchives()
 
     fun start() {
         println("Добро пожаловать в приложение 'Заметки'!")

@@ -1,7 +1,7 @@
 import java.util.Scanner
 
 open class NavigationAndInput {
-    val scanner = Scanner(System.`in`)
+    private val scanner = Scanner(System.`in`)
 
     fun checkNameOrContentInput(): String {
         while (true) {
