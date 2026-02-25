@@ -20,11 +20,12 @@ class ActionsWithArchives : NavigationAndInput() {
     }
 
     fun openArchive(archive: Archive) {
+        val action = ActionsWithNotes()
         val menuItems = listOf("Создать заметку", "Показать созданные заметки",)
         showMenu(Screens.NOTES_MENU, menuItems) { input ->
             when (input) {
-                1 -> archive.createNote()
-                2 -> archive.showNotes()
+                1 -> action.createNote(archive)
+                2 -> action.showNotes(archive)
             }
         }
     }
