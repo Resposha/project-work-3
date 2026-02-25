@@ -4,14 +4,12 @@ open class NavigationAndInput {
     private val scanner = Scanner(System.`in`)
 
     fun checkNameOrContentInput(): String {
-        while (true) {
-            val input = scanner.nextLine()
-            if (input.isNotBlank()) {
-                return input
-            } else {
-                println("Это поле не может быть пустым. Пожалуйста, повторите попытку.")
-            }
-        }
+        var input: String
+        do {
+            input = scanner.nextLine()
+            if (input.isBlank()) println("Это поле не может быть пустым. Пожалуйста, повторите попытку.")
+        } while (input.isBlank())
+        return input
     }
 
     fun showMenu(
